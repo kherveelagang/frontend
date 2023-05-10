@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend application using Electron with integration of OpenAI API and Supabase.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ite18/frontend.git"
+  },
+  "author": "Lieca Eleccion Khervee Lagang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ite18/frontend/issues"
+  },
+  "homepage": "https://github.com/ite18/frontend#readme",
+  "devDependencies": {
+    "electron": "^24.2.0"
+  }
+}
