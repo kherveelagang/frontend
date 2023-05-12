@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <title>Hello from Electron renderer!</title>
+    <title>Recipe Maker</title>
   </head>
   <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
+    <h1>Recipe Maker</h1>
+    
+    <form>
+      <label for="recipe-name">Recipe Name:</label>
+      <input type="text" id="recipe-name" name="recipe-name" required>
+      
+      <h2>Ingredients:</h2>
+      <ul>
+        <li><input type="checkbox" id="ingredient1" name="ingredient1" value="Ingredient 1"><label for="ingredient1"> Ingredient 1</label></li>
+        <li><input type="checkbox" id="ingredient2" name="ingredient2" value="Ingredient 2"><label for="ingredient2"> Ingredient 2</label></li>
+        <li><input type="checkbox" id="ingredient3" name="ingredient3" value="Ingredient 3"><label for="ingredient3"> Ingredient 3</label></li>
+        <li><input type="checkbox" id="ingredient4" name="ingredient4" value="Ingredient 4"><label for="ingredient4"> Ingredient 4</label></li>
+        <li><input type="checkbox" id="ingredient5" name="ingredient5" value="Ingredient 5"><label for="ingredient5"> Ingredient 5</label></li>
+      </ul>
+      
+      <h2>Instructions:</h2>
+      <ol>
+        <li><textarea id="step1" name="step1" rows="3" cols="50" placeholder="Step 1"></textarea></li>
+        <li><textarea id="step2" name="step2" rows="3" cols="50" placeholder="Step 2"></textarea></li>
+        <li><textarea id="step3" name="step3" rows="3" cols="50" placeholder="Step 3"></textarea></li>
+        <li><textarea id="step4" name="step4" rows="3" cols="50" placeholder="Step 4"></textarea></li>
+        <li><textarea id="step5" name="step5" rows="3" cols="50" placeholder="Step 5"></textarea></li>
+      </ol>
+      
+      <button type="submit">Save Recipe</button>
+      <button type="reset">Clear Fields</button>
+    </form>
+    
   </body>
+
   <script src="./js/renderer.js"></script>
 </html>
