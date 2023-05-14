@@ -2,6 +2,7 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const axios = require("axios");
+const dotenv = require("dotenv").config();
 
 //Main Window
 const isDev = true;
@@ -45,6 +46,8 @@ app.on("window-all-closed", () => {
 async function openAI(event, sentence) {
   let res = null;
 
+  const env = dotenv.parsed;
+
   await axios({
     url: "https://api.openai.com/v1/completions",
     method: "post",
@@ -60,8 +63,7 @@ async function openAI(event, sentence) {
     },
     headers: {
       "Content-Type": "application/json",
-      Authorization:
-        "Bearer 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",
+      Authorization: "Bearer " + env.APIKEY_OPENAI,
     },
   })
     .then(function (response) {
