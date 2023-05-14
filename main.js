@@ -1,6 +1,9 @@
-const { app, BrowserWindow } = require("electron");
+//Imported Modules
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const axios = require("axios");
 
+//Main Window
 const isDev = true;
 
 const createWindow = () => {
@@ -20,8 +23,53 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
+  //Initialize Functions
+  ipcMain.handle("axios.openAI", openAI);
+
   createWindow();
+
+  app.on("activate", () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow();
+    }
+  });
 });
+
 app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") app.quit();
+  if (process.platform !== "darwin") {
+    app.quit();
+  }
 });
+
+//Main Functions
+async function openAI(event, sentence) {
+  let res = null;
+
+  await axios({
+    url: "https://api.openai.com/v1/completions",
+    method: "post",
+    data: {
+      model: "text-davinci-003",
+      prompt: `The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman: Hello, who are you?\nAI: I am an AI created by OpenAI. How can I help you today?\n\nHuman: ${sentence}\nAI:`,
+      temperature: 0.9,
+      max_tokens: 150,
+      top_p: 1,
+      frequency_penalty: 0.0,
+      presence_penalty: 0.6,
+      stop: [" Human:", " AI:"],
+    },
+    headers: {
+      "Content-Type": "application/json",
+      Authorization:
+        "Bearer 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",
+    },
+  })
+    .then(function (response) {
+      res = response.data;
+    })
+    .catch(function (error) {
+      res = error;
+    });
+
+  return res;
+}
