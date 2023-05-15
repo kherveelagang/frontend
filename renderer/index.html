@@ -6,25 +6,28 @@
       content="default-src 'self'; script-src 'self'"
       />
     <title>Chat Form</title>
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <h1>ChatBot</h1>
 
-    <h2>How may I help you?</h2>
-    <div>
-      <form id="form_sentence">
-        <label for= "sentence">Input prompt:</label><br>
-        <textarea name="sentence" rows="4"></textarea><br>
-        <input type="submit" value="Submit"><br>
+    <div class="container bg-info bg-opacity-50 border border-info p-5 mt-2">
+      <h1 class="text-center text-primary">DodongBot</h1>
+      <h5>How may I help you?</h5>
+      
+      <form class="" id="form_sentence">
+        <label class= "form-label" for= "sentence">Input prompt:</label>
+        <textarea class= "form-control mb-3" name="sentence" rows="4"></textarea>
+        <input class= "btn btn-primary mb-3" type="submit" value="Submit">
       </form>
-      <br>
-      <div>
-        <label for="sentence_formed">Result:</label><br>
-        <textarea id="sentence_formed" rows="4" readonly></textarea>
+
+      <div class ="mt-3">
+        <label class= "form-label" for="sentence_formed">Result:</label>
+        <textarea class= "form-control" id="sentence_formed" rows="4" readonly></textarea>
     </div>
 
   </div>
 
+  <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
   </body>
   <script src="./js/renderer.js"></script>
 </html>
