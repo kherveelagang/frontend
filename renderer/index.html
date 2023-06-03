@@ -2,30 +2,57 @@
 <html>
   <head>
     <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'"
+    /><meta
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
       />
-    <title>Chat Form</title>
+    <title>Coeus- ChatAI Assistant</title>
     <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
   </head>
   <body>
-
-    <div class="container bg-info bg-opacity-50 border border-info p-5 mt-2">
-      <h1 class="text-center">DodongBot</h1>
-      <h5>How may I help you?</h5>
+    <header>
+      <a href="" class="logo">
+        <img src="" alt="">
+      </a>
+      <nav>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Use Bing</a>
+      </nav>
+      </header>
+  </div>
+      <div class="p-5 mt-2">
+        <div class="centered-image">
+          <h1 class="text-center gradient-text">COEUS</h1>
+          <img src="./images/coeus.png" class="square-image">
+        </div>
+        <div class="suggestion-prompt">
+          <p class="text-center">Have a question in mind?</p>
+          <p class="text-center">Ask me anything!</p>
+        </div>
       
-      <form class="" id="form_sentence">
-        <label class= "form-label" for= "sentence">Input prompt:</label>
-        <textarea class= "form-control mb-3" name="sentence" rows="4"></textarea>
-        <input class= "btn btn-primary mb-3" type="submit" value="Submit">
-      </form>
+       <div id="chat-container">
+        
+  <div id="sentence_formed" class="chat-messages"></div>
+  
 
-      <div class ="mt-3">
-        <label class= "form-label" for="sentence_formed">Result:</label>
-        <textarea class= "form-control" id="sentence_formed" rows="4" readonly></textarea>
-    </div>
+  <form id="form_sentence">
+    <input
+      class="form-control mb-3"
+      type="text"
+      name="sentence"
+      placeholder="Ask anything here..."
+    />
+    <input class="btn btn-primary" type="submit" value="Send" />
+  </form>
+</div>
+
 
   </div>
+  </div>  
 
   <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
   </body>
