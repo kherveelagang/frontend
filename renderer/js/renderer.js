@@ -12,6 +12,10 @@ if (form) {
       alertMessage("error", "Please enter a valid sentence!");
       return;
     }
+    if (sentence.length < 5) {
+      alertMessage("error", "Sentence must be at least 5 characters long!");
+      return;
+    }
 
     const response = await window.axios.openAI(sentence);
 
@@ -39,18 +43,41 @@ function createMessage(sender, text) {
 
   const senderLabel = document.createElement("span");
   senderLabel.classList.add("sender-label");
-  senderLabel.textContent = sender === "ai" ? "Coeus : " : "User : ";
+  senderLabel.textContent = sender === "ai" ? "Coeus: " : " ";
 
   const messageText = document.createElement("span");
   messageText.classList.add("message-text");
-  messageText.textContent = text;
+
+  message.appendChild(senderLabel);
+  message.appendChild(messageText);
+
+  if (sender === "ai") {
+    const typingText = "Typing...";
+    const typingSpeed = 100; // Speed of typing in milliseconds
+
+    let currentText = "";
+    let currentIndex = 0;
+
+    const typingInterval = setInterval(() => {
+      currentText += typingText[currentIndex];
+      messageText.textContent = currentText;
+      currentIndex++;
+
+      if (currentIndex >= typingText.length) {
+        clearInterval(typingInterval);
+        setTimeout(() => {
+          messageText.textContent = text;
+        }, 1000); // Delay before displaying the actual AI response
+      }
+    }, typingSpeed);
+  } else {
+    messageText.textContent = text;
+  }
 
   const timestamp = document.createElement("div");
   timestamp.classList.add("timestamp");
   updateTimestamp(timestamp);
 
-  message.appendChild(senderLabel);
-  message.appendChild(messageText);
   message.appendChild(timestamp);
 
   messageContainer.appendChild(message);

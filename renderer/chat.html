@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>Coeus - ChatAI Assistant</title>
+  <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+
+
+  <div class="p-5 mt-2">
+   
+    <div class="suggestion-prompt">
+      <p class="text-center">Greetings, mortal! I am Coeus, the wise Titan of intelligence. How may my knowledge serve you?</p>
+      <p class="text-center">Ask me anything!</p>
+    </div>
+  
+    <div id="chat-container" class="container">
+      <div id="sentence_formed" class="chat-messages"></div>
+
+      <form id="form_sentence">
+        <input class="form-control mb-3" type="text" name="sentence" placeholder="Ask anything here...">
+        <input class="btn btn-primary" type="submit" value="Send">
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="./js/renderer.js"></script>
+</body>
+</html>
