@@ -1,0 +1,124 @@
+body {
+    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+    font-family: "Helvetica", Arial, sans-serif;
+    height: 100vh;
+  }
+  
+  header {
+    position: sticky;
+    top: 1;
+    width: 100%;
+    padding-top: 1rem;
+    padding-inline: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+  
+  header .logo img {
+    height: 40px;
+  }
+  
+  header nav {
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: .9rem;
+    text-transform: capitalize;
+    border-radius: 100vw;
+    padding: .5rem 1rem;
+    transition: .3s ease;
+  }
+  
+  header nav a.highlight {
+    background: #1b1c26;
+    color: #fff;
+  }
+  
+  
+  .container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .container h1,
+  .container h6,
+  .container label {
+    color: #333;
+  }
+  
+  .container img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .container textarea {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .container .btn-primary {
+    background-color: #0084ff;
+    border-color: #0084ff;
+  }
+  
+  .container .btn-primary:hover {
+    background-color: #0063cc;
+    border-color: #0063cc;
+  }
+  
+  #chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .chat-messages {
+    margin-bottom: 10px;
+  }
+  
+  .message-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+  }
+  
+  .sender-label {
+    font-weight: bold;
+  }
+  
+  .user-message {
+    background-color: #63c5da;
+    color: #fff;
+    align-self: flex-end;
+  }
+  
+  .ai-message {
+    background-color: lightgray;
+    align-self: flex-start;
+    margin-right: auto;
+  }
+  
+  .timestamp {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 5px;
+  }

@@ -43,18 +43,6 @@ header nav a.highlight {
   color: #fff;
 }
 
-.square-image {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.suggestion-prompt p {
-  color: #333;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
 
 .container {
   background-color: #f0f0f0;
