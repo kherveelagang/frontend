@@ -153,13 +153,4 @@ header nav a.highlight {
   }
 }
 
-/* Add the following styles for backspace effect */
-.typing-demo.backspace {
-  animation: backspace 2s steps(22), blink .5s step-end infinite alternate;
-}
 
-@keyframes backspace {
-  to {
-    width: 0;
-  }
-}
