@@ -100,6 +100,15 @@ h6 {
 .navbar li:hover>a {
   color: blue;
 }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }  
+
 .typing-demo {
   width: 43ch;
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
@@ -122,4 +131,36 @@ h6 {
   }
 }
 
+
+
+
+.button-wrapper {
+  text-align: center;
+}
+
+.button-wrapper .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4d4643;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button-wrapper .btn:hover {
+  background-color: blue;
+}
+footer {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
 

@@ -31,13 +31,7 @@ const template = [
   // { role: 'fileMenu' }
   {
     label: "File",
-    submenu: [
-      {
-        label: "About",
-        click: aboutWindow,
-      },
-      isMac ? { role: "close" } : { role: "quit" },
-    ],
+    submenu: [isMac ? { role: "close" } : { role: "quit" }],
   },
   // { role: 'editMenu' }
   {
