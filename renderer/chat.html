@@ -10,12 +10,13 @@
     http-equiv="X-Content-Security-Policy"
     content="default-src 'self'; script-src 'self'"
     />
-	<title>About Us</title>
+  <script src="https://kit.fontawesome.com/1a3d4dfa60.js" crossorigin="anonymous"></script>
+	<title>Coeus</title>
     <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="./about.css" rel="stylesheet">
+    <link href="./chat.css" rel="stylesheet">
 </head>
 <body> 
-    <header id="header" class="fixed-top">
+ <!--   <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center">
     
           <h1 class="logo me-auto"><a href="./index.html">Coeus</a></h1>
@@ -30,23 +31,58 @@
             </ul>
           </nav>
         </div>
-    </header>
+    </header>-->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="fa-solid fa-bars" id="sidebarOpen"></i>
+        Coeus
+      </div>
+      
+      <div class="navbar_content">
+        <i class="fa-solid fa-circle-half-stroke" id="darkLight"></i>
+        <img src="./images/user.png" alt="User" class="profile" />
+      </div>
+    </nav>
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard"></div>
+          <li class="item">
+            <a href="index.html" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="fa-regular fa-house"></i>
+              </span>
+              <span class="navlink">Home</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="about.html" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <span class="navlink">About</span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </nav>
     <div class="p-5 mt-2">
    
-        <div class="suggestion-prompt">
-          <p class="text-center">Greetings, mortal! I am Coeus, the wise Titan of intelligence. How may my knowledge serve you?</p>
-        </div>
-      
-        <div id="chat-container" class="container">
-          <div id="sentence_formed" class="chat-messages"></div>
+      <div class="suggestion-prompt">
+        <p class="text-center">Greetings, mortal! I am Coeus, the wise Titan of intelligence. How may my knowledge serve you?</p>
+      </div>
     
-          <form id="form_sentence">
-            <input class="form-control mb-3" type="text" name="sentence" placeholder="Ask anything here...">
-            <input class="btn btn-primary" type="submit" value="Send">
-          </form>
-        </div>
-    </div>
-    
+      <div id="chat-container" class="container">
+        <div id="sentence_formed" class="chat-messages"></div>
+  
+        <form id="form_sentence">
+          <input class="form-control mb-3" type="text" name="sentence" placeholder="Ask anything here...">
+          <input class="btn btn-primary" type="submit" value="Send">
+        </form>
+      </div>
+  </div>
+
+
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./js/renderer.js"></script>
 </body>

@@ -175,3 +175,9 @@ function loadConversationFromLocalStorage() {
     sentenceFormed.scrollTop = sentenceFormed.scrollHeight;
   }
 }
+const sidebarOpen = document.getElementById("sidebarOpen");
+const sidebar = document.getElementById("sidebar");
+
+sidebarOpen.addEventListener("click", () => {
+  sidebar.classList.toggle("sidebar-open");
+});
