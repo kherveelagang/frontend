@@ -1,106 +1,3 @@
-/*body {
-  font-family: "Poppins", sans-serif;
-  color: #4d4643;
-}
-
-a {
-  color: blue;
-  text-decoration: none;
-}
-
-a:hover {
-  color: blue;
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Poppins", sans-serif;
-}
-
-
-/*header
-#header {
-  background: #fff;
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 15px 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-#header .logo {
-  font-size: 28px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-#header .logo a {
-  color: #111;
-}
-
-#header .logo a span {
-  color: rgb(0, 78, 146);
-  background: radial-gradient(circle, rgba(0, 78, 146, 1) 36%, rgba(0, 4, 40, 1) 99%);
-
-}
-
-#header .logo img {
-  max-height: 40px;
-}
-.navbar {
-  padding: 0;
-}
-
-.navbar ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.navbar li {
-  position: relative;
-}
-
-.navbar a,
-.navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0 10px 30px;
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: #111;
-  white-space: nowrap;
-  text-transform: uppercase;
-  transition: 0.3s;
-}
-
-.navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
-  line-height: 0;
-  margin-left: 5px;
-}
-
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover>a {
-  color: blue;
-}
-*/
-/* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -329,41 +226,87 @@ body.dark {
     left: -100%;
   }
 }
-.p-5 {
-  padding: 5px;
+  .container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 100px;
+    padding-bottom: 50px;
+  }
+  
+  .container h1,
+  .container h6,
+  .container label {
+    color: #333;
+  }
+  
+  .container img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .container textarea {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .container .btn-primary {
+    background-color: #0084ff;
+    border-color: #0084ff;
+  }
+  
+  .container .btn-primary:hover {
+    background-color: #0063cc;
+    border-color: #0063cc;
+  }
+  
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    overflow-y: auto;
+    position: relative;
 }
 
-.mt-2 {
-  margin-top: 2px;
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
 }
 
-.suggestion-prompt {
-  text-align: center;
+.message {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 80%;
 }
 
-.chat-messages {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  max-height: 300px;
-  overflow-y: auto;
+.user-message {
+    background-color: #0096ff;
+    align-self: flex-end;
+    text-align: right;
+    float: right; /* Float user message to the right*/
 }
 
-form#form_sentence input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.ai-message {
+    background-color: #d4d6da;
+    align-self: flex-start;
+    float: left; /* Float AI message to the left*/ 
 }
 
-form#form_sentence input[type="submit"] {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #4d4643;
-  color: #fff;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+.sender-label {
+    font-weight: bold;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #808080;
+    position: absolute;
+    margin-top: 5px;
+    
+}
+
+.form-control {
+    width: 100%;
 }
